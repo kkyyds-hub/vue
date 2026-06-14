@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+*.local
+.~*
+homepage-preview.png
+*.doc
+*.docx
+作品提交要求，非常重要，请认真查看.txt
