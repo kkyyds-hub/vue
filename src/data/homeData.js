@@ -1,10 +1,12 @@
+import { yanyunAssets } from './assetManifest'
+
 export const heroKeywords = ['开放世界', '武侠动作', '山河探索', '传统文化']
 
 export const scrollStats = [
   { value: '山河', label: '开放远行' },
   { value: '武学', label: '兵器交锋' },
   { value: '奇术', label: '万法入局' },
-  { value: '画卷', label: '实机画面' },
+  { value: '风貌', label: '画面归档' },
 ]
 
 export const featureCards = [
@@ -13,7 +15,7 @@ export const featureCards = [
     label: '真开放',
     english: 'Open World',
     title: '无缝山河，自由寻踪',
-    summary: '从清河水岸到开封市井，再到河西风沙，以区域线索串联探索、奇遇与收集。',
+    summary: '以山海远景、城郭烟火与探索线索串联开放世界，不把未确认画面强行标成具体地点。',
     points: ['无缝地图', '山河探索', '奇遇线索'],
   },
   {
@@ -29,7 +31,7 @@ export const featureCards = [
     label: '真动作',
     english: 'Action',
     title: '十八般兵器，攻守有度',
-    summary: '从剑、枪、双刀到扇与伞，记录不同武器的定位、关键词与战斗反馈。',
+    summary: '从可靠素材出发整理兵器与武学气质，记录不同流派的定位、关键词与战斗反馈。',
     points: ['十八般武器', '攻守博弈', '战斗反馈'],
   },
   {
@@ -52,8 +54,8 @@ export const showcaseTabs = [
 export const showcasePanels = {
   world: {
     title: '以山河为卷',
-    subtitle: '清河、开封、河西等区域承载不同地貌、城镇与探索密度。',
-    points: ['水岸、城郭、边地各有风物与传闻', '时间、天气与玩家行动牵动江湖变化', '地宫、奇遇与远景共同铺开开放世界'],
+    subtitle: '山海、城郭与远景承载不同探索密度，也让资料入口更像一卷可展开的江湖图。',
+    points: ['山水远景、城郭生活与隐秘路径各有风物', '时间、天气与玩家行动牵动江湖变化', '地宫、奇遇与远景共同铺开开放世界'],
   },
   combat: {
     title: '以武学为笔',
@@ -72,30 +74,46 @@ export const showcasePanels = {
   },
 }
 
-export const galleryItems = [
+export const worldScenes = [
   {
-    id: 'bamboo',
-    title: '竹林幽径',
-    subtitle: '清河林间、水雾与远行氛围',
-    image: '/assets/yanyun/gallery-bamboo.jpg',
+    id: 'open-world',
+    title: '山海远行',
+    subtitle: '山海、远景与初入江湖的开阔感。',
+    image: yanyunAssets.worldWater.file,
+    sourceKey: 'worldWater',
+    tags: ['山海', '远行', '开放世界'],
   },
   {
-    id: 'village',
-    title: '水车村落',
-    subtitle: '田园聚落与山脚风物',
-    image: '/assets/yanyun/gallery-village.jpg',
+    id: 'city-life',
+    title: '城郭烟火',
+    subtitle: '古代城镇、人群与生活气息。',
+    image: yanyunAssets.worldCity.file,
+    sourceKey: 'worldCity',
+    tags: ['城郭', '市井', '人间'],
   },
   {
-    id: 'tower',
-    title: '塔影远山',
-    subtitle: '夕照、古塔与远景层次',
-    image: '/assets/yanyun/gallery-tower.jpg',
+    id: 'mystic',
+    title: '中式谜境',
+    subtitle: '奇术、谜题与中式志怪氛围。',
+    image: yanyunAssets.worldMystic.file,
+    sourceKey: 'worldMystic',
+    tags: ['奇术', '谜境', '志怪'],
   },
   {
-    id: 'flower-field',
-    title: '幽花荒径',
-    subtitle: '荒村、花海与隐秘线索',
-    image: '/assets/yanyun/gallery-flower-field.jpg',
+    id: 'combat',
+    title: '兵器交锋',
+    subtitle: '山河之间，武学动作与战斗反馈交织。',
+    image: yanyunAssets.worldCombat.file,
+    sourceKey: 'worldCombat',
+    tags: ['武学', '动作', '战斗'],
+  },
+  {
+    id: 'culture',
+    title: '舞乐人间',
+    subtitle: '城楼、舞乐与万象人间的文化气质。',
+    image: yanyunAssets.worldCulture.file,
+    sourceKey: 'worldCulture',
+    tags: ['舞乐', '文化', '人间'],
   },
 ]
 
@@ -103,98 +121,37 @@ export const weaponPreviews = [
   {
     id: 'sword',
     name: '剑',
-    image: '/assets/yanyun/weapon-sword.jpg',
+    image: yanyunAssets.weaponSword.file,
     role: '均衡近战',
     tags: ['灵动', '连击', '破势'],
     summary: '适合正面拆招与灵活追击，是进入江湖时最容易建立节奏感的兵器。',
     detail: '剑法讲究进退有度，基础攻防、连段衔接与破势反馈清晰，是最能体现游侠气质的兵器之一。',
   },
   {
-    id: 'spear',
-    name: '枪',
-    image: '/assets/yanyun/weapon-spear.jpg',
-    role: '中距压制',
-    tags: ['突进', '控距', '穿刺'],
-    summary: '以距离和起手优势见长，适合处理开阔场景中的强敌与群战。',
-    detail: '枪的资料可围绕控距、突进、挑击与硬直管理展开，体现动作系统中的攻守博弈。',
-  },
-  {
-    id: 'dual-blades',
-    name: '双刀',
-    image: '/assets/yanyun/weapon-dual-blades.jpg',
-    role: '高速爆发',
-    tags: ['迅捷', '爆发', '贴身'],
-    summary: '强调近身压迫与连续输出，适合喜欢快节奏战斗的游侠。',
-    detail: '双刀重在贴身压迫、闪避衔接与连续进攻，适合在短时间内打出明快的战斗节奏。',
+    id: 'martial',
+    name: '百门武学',
+    image: yanyunAssets.weaponMartial.file,
+    role: '流派变化',
+    tags: ['百门', '招式', '身法'],
+    summary: '不同流派带来不同的节奏、姿态和战斗理解。',
+    detail: '百门武学不只是一组技能，而是让角色在战斗、探索和身份表达中拥有更多变化。',
   },
   {
     id: 'fan',
     name: '扇',
-    image: '/assets/yanyun/weapon-fan.jpg',
+    image: yanyunAssets.weaponFan.file,
     role: '灵巧牵制',
     tags: ['牵制', '身法', '雅致'],
     summary: '以轻巧姿态制造节奏变化，在资料呈现上兼具战斗与江湖气质。',
     detail: '扇适合呈现武侠作品中“以柔制刚”的审美，也能与控制、位移和远近切换玩法关联。',
   },
   {
-    id: 'umbrella',
-    name: '伞',
-    image: '/assets/yanyun/weapon-umbrella.jpg',
-    role: '攻防转换',
-    tags: ['格挡', '反制', '机巧'],
-    summary: '攻防一体，具备强烈辨识度，可作为平台中高记忆点的兵器条目。',
-    detail: '伞的资料可强调防守、反击与机关感，适合在首页中承担“非传统武器”的视觉亮点。',
-  },
-  {
-    id: 'mystic',
-    name: '奇术',
-    image: '/assets/yanyun/gallery-flower-field.jpg',
-    role: '江湖破局',
-    tags: ['太极', '点穴', '狮吼功'],
-    summary: '不局限于兵器，奇术让探索、战斗与互动拥有更多解法。',
-    detail: '奇术包含太极、点穴、狮吼功、蛤蟆功等武侠想象，既能入战，也能成为探索与互动的别样解法。',
-  },
-]
-
-export const mapAreas = [
-  {
-    id: 'qinghe',
-    name: '清河竹林',
-    english: 'Qinghe',
-    image: '/assets/yanyun/area-qinghe.jpg',
-    status: '已收录',
-    keywords: ['竹林', '水雾', '幽径'],
-    summary: '竹影与水雾铺开清河的静谧气质，适合承载初入江湖的探索线索。',
-    more: '林间视野层次清楚，适合整理采集、奇遇与隐秘路径。',
-  },
-  {
-    id: 'village',
-    name: '水车村落',
-    english: 'Village',
-    image: '/assets/yanyun/area-village.jpg',
-    status: '重点整理',
-    keywords: ['水车', '村舍', '田园'],
-    summary: '水车、村舍与山脚景观构成烟火气入口，适合承接人物与支线传闻。',
-    more: '村落空间有明显生活痕迹，适合整理 NPC、采集点和日常玩法。',
-  },
-  {
-    id: 'tower',
-    name: '塔影远山',
-    english: 'Tower',
-    image: '/assets/yanyun/area-tower.jpg',
-    status: '线索归档',
-    keywords: ['古塔', '夕照', '远山'],
-    summary: '古塔与远山形成开阔视线，适合呈现大地图的远景尺度。',
-    more: '夕照氛围明确，适合做路线推荐、观景点和拍照点资料。',
-  },
-  {
-    id: 'unknown',
-    name: '幽花荒径',
-    english: 'Wilderness',
-    image: '/assets/yanyun/area-flower-field.jpg',
-    status: '江湖传闻',
-    keywords: ['荒村', '花海', '隐秘'],
-    summary: '幽蓝花海与荒村气质并置，适合收纳传闻、怪谈和隐秘线索。',
-    more: '画面偏冷、气氛浓烈，可以作为探索专题中的悬疑入口。',
+    id: 'ice',
+    name: '冷色兵刃',
+    image: yanyunAssets.weaponIce.file,
+    role: '风格展示',
+    tags: ['锋刃', '冷色', '流派'],
+    summary: '以冷色视觉呈现兵刃与角色姿态，强调武学风格差异。',
+    detail: '该图用于武器风格展示，不强行绑定到具体兵器，避免素材误用。',
   },
 ]

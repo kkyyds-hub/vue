@@ -25,9 +25,8 @@ defineProps({
       <div class="top-nav__links">
         <a href="#top">首页</a>
         <a href="#features">江湖资料</a>
-        <a href="#weapons">武学图鉴</a>
-        <a href="#gallery">实机画面</a>
-        <a href="#areas">山河探索</a>
+        <a href="#world-scenes">江湖风貌</a>
+        <a href="#weapons">武学与兵器</a>
       </div>
     </nav>
 
@@ -47,7 +46,7 @@ defineProps({
 
         <div class="hero__actions">
           <a class="button button--primary" href="#features">进入江湖</a>
-          <a class="button button--ghost" href="#gallery">查看实机画面</a>
+          <a class="button button--ghost" href="#world-scenes">查看实机画面</a>
         </div>
       </div>
 

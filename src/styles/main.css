@@ -442,7 +442,7 @@ a {
 .section {
   max-width: 1180px;
   margin: 0 auto;
-  padding: clamp(4.5rem, 8vw, 7.5rem) clamp(1rem, 3vw, 3rem) 0;
+  padding: clamp(3.8rem, 6.5vw, 6.2rem) clamp(1rem, 3vw, 3rem) 0;
 }
 
 .section__heading {
@@ -831,6 +831,227 @@ a {
   font-size: 1.25rem;
 }
 
+.world-scenes__count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.4rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(214, 173, 98, 0.28);
+  border-radius: 999px;
+  color: var(--gold-bright);
+  background: rgba(0, 0, 0, 0.18);
+  font-family: "Cinzel", "Cormorant Garamond", "Inter", "Avenir Next", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.world-scenes__shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.6fr);
+  height: clamp(34rem, 58vw, 42rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(214, 173, 98, 0.14), transparent 20rem),
+    rgba(15, 16, 15, 0.8);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.world-scenes__stage {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.world-scenes__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: #08090a;
+  cursor: zoom-in;
+}
+
+.world-scenes__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 620ms ease,
+    filter 620ms ease;
+}
+
+.world-scenes__image:hover img {
+  transform: scale(1.025);
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.world-scenes__stage::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 52%, rgba(9, 10, 10, 0.36) 100%),
+    linear-gradient(180deg, transparent 58%, rgba(7, 8, 9, 0.62) 100%);
+}
+
+.world-scenes__controls {
+  position: absolute;
+  z-index: 2;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.world-scenes__controls button,
+.weapon-slider__actions button {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  border: 1px solid rgba(214, 173, 98, 0.28);
+  border-radius: 50%;
+  color: #f3d486;
+  background: rgba(0, 0, 0, 0.42);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease;
+}
+
+.world-scenes__controls button:hover,
+.weapon-slider__actions button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(214, 173, 98, 0.56);
+  background: rgba(214, 173, 98, 0.12);
+}
+
+.world-scenes__copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(1.3rem, 3vw, 2.2rem);
+  border-left: 1px solid rgba(214, 173, 98, 0.16);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), transparent 42%),
+    rgba(8, 9, 10, 0.36);
+}
+
+.world-scenes__copy h3 {
+  margin: 0;
+  color: #f5ddb0;
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  line-height: 1.08;
+}
+
+.world-scenes__copy p:not(.eyebrow) {
+  margin: 1rem 0 0;
+  color: #cfc1a3;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  line-height: 1.85;
+}
+
+.world-scenes__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.35rem;
+}
+
+.world-scenes__tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.9rem;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(214, 173, 98, 0.24);
+  border-radius: 999px;
+  color: #e8d5aa;
+  background: rgba(255, 255, 255, 0.045);
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 0.84rem;
+}
+
+.world-scenes__dots {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.world-scenes__dots button {
+  min-height: 3.1rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(214, 173, 98, 0.16);
+  border-radius: 8px;
+  color: #d7c8aa;
+  background: rgba(255, 255, 255, 0.035);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  transition:
+    border-color 220ms ease,
+    background 220ms ease,
+    color 220ms ease;
+}
+
+.world-scenes__dots button.is-active {
+  color: #ffe5ad;
+  border-color: rgba(214, 173, 98, 0.48);
+  background: rgba(214, 173, 98, 0.11);
+}
+
+.scene-fade-enter-active,
+.scene-fade-leave-active {
+  transition:
+    opacity 320ms ease,
+    transform 320ms ease;
+}
+
+.scene-fade-enter-from,
+.scene-fade-leave-to {
+  opacity: 0;
+  transform: scale(1.01);
+}
+
+.weapon-slider__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.weapon-slider__track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-padding: clamp(1rem, 3vw, 3rem);
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.weapon-slider__track::-webkit-scrollbar {
+  display: none;
+}
+
+.weapon-slider__track .weapon-card {
+  flex: 0 0 clamp(18rem, 32vw, 24rem);
+  min-height: 28rem;
+  scroll-snap-align: start;
+}
+
 .weapon-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1062,6 +1283,7 @@ a {
 
 .detail-modal__close {
   position: absolute;
+  z-index: 3;
   top: 0.9rem;
   right: 0.9rem;
   display: grid;
@@ -1162,6 +1384,32 @@ a {
     justify-content: flex-end;
     row-gap: 0.5rem;
   }
+
+  .world-scenes__shell {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .world-scenes__stage {
+    height: 26rem;
+  }
+
+  .world-scenes__copy {
+    border-top: 1px solid rgba(214, 173, 98, 0.16);
+    border-left: 0;
+  }
+
+  .world-scenes__dots {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin-top: 1.4rem;
+    padding-top: 0;
+  }
+
+  .world-scenes__dots button {
+    min-height: 2.7rem;
+    padding: 0 0.6rem;
+    text-align: center;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1216,6 +1464,28 @@ a {
 
   .gallery-card {
     min-height: 15rem;
+  }
+
+  .world-scenes__stage {
+    height: 18rem;
+  }
+
+  .world-scenes__dots {
+    grid-template-columns: 1fr;
+  }
+
+  .weapon-slider__actions {
+    justify-content: flex-start;
+  }
+
+  .weapon-slider__track {
+    margin-right: calc(clamp(1rem, 3vw, 3rem) * -1);
+    padding-right: clamp(1rem, 3vw, 3rem);
+  }
+
+  .weapon-slider__track .weapon-card {
+    flex-basis: min(82vw, 22rem);
+    min-height: 26rem;
   }
 
   .gallery-viewer__panel figcaption {
