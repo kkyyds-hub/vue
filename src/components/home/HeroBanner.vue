@@ -1,10 +1,8 @@
 <script setup>
+import { RouterLink } from 'vue-router'
+
 defineProps({
   keywords: {
-    type: Array,
-    required: true,
-  },
-  stats: {
     type: Array,
     required: true,
   },
@@ -16,19 +14,6 @@ defineProps({
     <div class="hero__mist hero__mist--left"></div>
     <div class="hero__mist hero__mist--right"></div>
     <div class="hero__grain"></div>
-
-    <nav class="top-nav" aria-label="首页导航">
-      <a class="top-nav__brand" href="#top">
-        <span>燕云录</span>
-        <small>Where Winds Meet</small>
-      </a>
-      <div class="top-nav__links">
-        <a href="#top">首页</a>
-        <a href="#features">江湖资料</a>
-        <a href="#world-scenes">江湖风貌</a>
-        <a href="#weapons">武学与兵器</a>
-      </div>
-    </nav>
 
     <div class="hero__content">
       <div class="hero__copy">
@@ -46,21 +31,30 @@ defineProps({
 
         <div class="hero__actions">
           <a class="button button--primary" href="#features">进入江湖</a>
-          <a class="button button--ghost" href="#world-scenes">查看实机画面</a>
+          <a class="button button--ghost" href="#world-scenes">查看风貌</a>
         </div>
       </div>
 
-      <aside class="scroll-card" aria-label="江湖卷轴式信息卡">
-        <div class="scroll-card__line"></div>
-        <p class="eyebrow">Archive Scroll</p>
-        <h3>全新江湖资料卷</h3>
-        <p>山河 / 武学 / 奇术 / 实机画面</p>
-        <div class="scroll-card__grid">
-          <div v-for="item in stats" :key="item.value" class="scroll-card__item">
-            <strong>{{ item.value }}</strong>
-            <span>{{ item.label }}</span>
+      <aside class="profile-entry-card" aria-label="我的游侠档案入口">
+        <div class="profile-entry-card__seal">游侠</div>
+        <p class="eyebrow">Profile Gate</p>
+        <h3>我的游侠档案</h3>
+        <p class="profile-entry-card__intro">装备 / 兵器 / 截图 / 探索记录</p>
+        <div class="profile-entry-card__list">
+          <div>
+            <span>游侠名</span>
+            <strong>待录入</strong>
+          </div>
+          <div>
+            <span>常用兵器</span>
+            <strong>待选择</strong>
+          </div>
+          <div>
+            <span>探索记录</span>
+            <strong>待整理</strong>
           </div>
         </div>
+        <RouterLink class="button button--primary profile-entry-card__button" to="/profile">进入档案</RouterLink>
       </aside>
     </div>
   </section>

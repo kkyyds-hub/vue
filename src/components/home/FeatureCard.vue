@@ -1,14 +1,20 @@
 <script setup>
-defineProps({
+import { computed } from 'vue'
+import { RouterLink } from 'vue-router'
+
+const props = defineProps({
   feature: {
     type: Object,
     required: true,
   },
 })
+
+const componentType = computed(() => (props.feature.to ? RouterLink : 'a'))
+const linkProps = computed(() => (props.feature.to ? { to: props.feature.to } : { href: props.feature.href }))
 </script>
 
 <template>
-  <article class="feature-card">
+  <component :is="componentType" class="feature-card feature-card--link" v-bind="linkProps">
     <div class="feature-card__head">
       <span>{{ feature.label }}</span>
       <small>{{ feature.english }}</small>
@@ -18,5 +24,6 @@ defineProps({
     <ul>
       <li v-for="point in feature.points" :key="point">{{ point }}</li>
     </ul>
-  </article>
+    <span class="feature-card__go">进入栏目</span>
+  </component>
 </template>

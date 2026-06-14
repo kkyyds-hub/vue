@@ -20,6 +20,10 @@ defineEmits(['close'])
           <div v-if="item.image" class="detail-modal__media">
             <img :src="item.image" :alt="`${item.name}详情画面`" />
           </div>
+          <div v-else class="detail-modal__media detail-modal__media--empty">
+            <span>{{ item.name.slice(0, 1) }}</span>
+            <small>资料待补图</small>
+          </div>
           <p class="eyebrow">Wuxia Archive</p>
           <h3>{{ item.name }}</h3>
           <p class="detail-modal__role">{{ item.role }}</p>

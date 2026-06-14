@@ -12,9 +12,19 @@ defineEmits(['select'])
 </script>
 
 <template>
-  <article class="weapon-card" tabindex="0" @click="$emit('select', weapon)" @keydown.enter="$emit('select', weapon)">
+  <article
+    class="weapon-card"
+    :class="{ 'weapon-card--empty': !weapon.image }"
+    tabindex="0"
+    @click="$emit('select', weapon)"
+    @keydown.enter="$emit('select', weapon)"
+  >
     <div v-if="weapon.image" class="weapon-card__media">
       <img :src="weapon.image" :alt="`${weapon.name}武学画面`" loading="lazy" />
+    </div>
+    <div v-else class="weapon-placeholder" aria-hidden="true">
+      <span class="weapon-placeholder__word">{{ weapon.name.slice(0, 1) }}</span>
+      <small>资料待补图</small>
     </div>
     <div class="weapon-card__top">
       <span class="weapon-card__mark">{{ weapon.name.slice(0, 1) }}</span>

@@ -10,7 +10,6 @@ import WorldScenesCarousel from '@/components/home/WorldScenesCarousel.vue'
 import {
   featureCards,
   heroKeywords,
-  scrollStats,
   showcasePanels,
   showcaseTabs,
   weaponPreviews,
@@ -26,7 +25,7 @@ function openWeaponDetail(weapon) {
 
 <template>
   <main class="home-page">
-    <HeroBanner :keywords="heroKeywords" :stats="scrollStats" />
+    <HeroBanner :keywords="heroKeywords" />
 
     <section class="section features" id="features">
       <div class="section__heading">
