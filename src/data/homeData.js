@@ -1,10 +1,10 @@
 export const heroKeywords = ['开放世界', '武侠动作', '山河探索', '传统文化']
 
 export const scrollStats = [
-  { value: 'Open World', label: '江湖无界' },
-  { value: 'Wuxia', label: '武学奇术' },
-  { value: 'Qinghe', label: '山河区域' },
-  { value: 'Culture', label: '文化建树' },
+  { value: '山河', label: '开放远行' },
+  { value: '武学', label: '兵器交锋' },
+  { value: '奇术', label: '万法入局' },
+  { value: '画卷', label: '实机画面' },
 ]
 
 export const featureCards = [
@@ -53,37 +53,66 @@ export const showcasePanels = {
   world: {
     title: '以山河为卷',
     subtitle: '清河、开封、河西等区域承载不同地貌、城镇与探索密度。',
-    points: ['区域资料按地貌、市井、地宫与奇遇线索归档', '以时间、天气与玩家行动串联探索体验', '保留后续地图筛选与收藏入口'],
+    points: ['水岸、城郭、边地各有风物与传闻', '时间、天气与玩家行动牵动江湖变化', '地宫、奇遇与远景共同铺开开放世界'],
   },
   combat: {
     title: '以武学为笔',
     subtitle: '剑、枪、双刀、扇、伞等兵器共同构成动作与策略层次。',
-    points: ['记录武器定位、出手节奏与适用场景', '整理门派招式、连段思路与克制关系', '为完整武学图鉴页预留数据结构'],
+    points: ['兵器定位鲜明，出手节奏各不相同', '门派招式、连段思路与克制关系彼此交织', '攻守转换与战斗反馈更接近真正的武侠较量'],
   },
   mystic: {
     title: '奇术入局，动静皆法',
     subtitle: '太极、点穴、狮吼功、蛤蟆功等奇术让江湖探索不止于战斗。',
-    points: ['按控制、位移、破局与趣味交互分类', '强调武侠想象与开放世界互动结合', '为后续奇术演示组件预留扩展字段'],
+    points: ['控制、位移、破局与趣味交互各成门道', '武侠想象与开放世界互动彼此呼应', '一招一式都可能成为探索江湖的钥匙'],
   },
   culture: {
     title: '万象人间，有物有情',
     subtitle: '百工百器、建筑营造、历法天象与民俗游艺，让资料平台不只收录战力。',
-    points: ['记录传统文化元素与场景用途', '将医术、营造、游艺等内容纳入探索线索', '以收藏与专题页承接深度内容'],
+    points: ['传统工艺与场景用途藏在市井细节里', '医术、营造、游艺等百业共同构成江湖生活', '从战斗之外看见一个更完整的人间'],
   },
 }
+
+export const galleryItems = [
+  {
+    id: 'bamboo',
+    title: '竹林幽径',
+    subtitle: '清河林间、水雾与远行氛围',
+    image: '/assets/yanyun/gallery-bamboo.jpg',
+  },
+  {
+    id: 'village',
+    title: '水车村落',
+    subtitle: '田园聚落与山脚风物',
+    image: '/assets/yanyun/gallery-village.jpg',
+  },
+  {
+    id: 'tower',
+    title: '塔影远山',
+    subtitle: '夕照、古塔与远景层次',
+    image: '/assets/yanyun/gallery-tower.jpg',
+  },
+  {
+    id: 'flower-field',
+    title: '幽花荒径',
+    subtitle: '荒村、花海与隐秘线索',
+    image: '/assets/yanyun/gallery-flower-field.jpg',
+  },
+]
 
 export const weaponPreviews = [
   {
     id: 'sword',
     name: '剑',
+    image: '/assets/yanyun/weapon-sword.jpg',
     role: '均衡近战',
     tags: ['灵动', '连击', '破势'],
     summary: '适合正面拆招与灵活追击，是进入江湖时最容易建立节奏感的兵器。',
-    detail: '剑法讲究进退有度，适合展示基础攻防、连段衔接与破势反馈。后续图鉴页可继续补充招式来源、适配奇术与实战场景。',
+    detail: '剑法讲究进退有度，基础攻防、连段衔接与破势反馈清晰，是最能体现游侠气质的兵器之一。',
   },
   {
     id: 'spear',
     name: '枪',
+    image: '/assets/yanyun/weapon-spear.jpg',
     role: '中距压制',
     tags: ['突进', '控距', '穿刺'],
     summary: '以距离和起手优势见长，适合处理开阔场景中的强敌与群战。',
@@ -92,14 +121,16 @@ export const weaponPreviews = [
   {
     id: 'dual-blades',
     name: '双刀',
+    image: '/assets/yanyun/weapon-dual-blades.jpg',
     role: '高速爆发',
     tags: ['迅捷', '爆发', '贴身'],
     summary: '强调近身压迫与连续输出，适合喜欢快节奏战斗的游侠。',
-    detail: '双刀卡片后续可扩展攻速、连击收益、闪避衔接等字段，作为武学图鉴的轻量预览。',
+    detail: '双刀重在贴身压迫、闪避衔接与连续进攻，适合在短时间内打出明快的战斗节奏。',
   },
   {
     id: 'fan',
     name: '扇',
+    image: '/assets/yanyun/weapon-fan.jpg',
     role: '灵巧牵制',
     tags: ['牵制', '身法', '雅致'],
     summary: '以轻巧姿态制造节奏变化，在资料呈现上兼具战斗与江湖气质。',
@@ -108,6 +139,7 @@ export const weaponPreviews = [
   {
     id: 'umbrella',
     name: '伞',
+    image: '/assets/yanyun/weapon-umbrella.jpg',
     role: '攻防转换',
     tags: ['格挡', '反制', '机巧'],
     summary: '攻防一体，具备强烈辨识度，可作为平台中高记忆点的兵器条目。',
@@ -116,48 +148,53 @@ export const weaponPreviews = [
   {
     id: 'mystic',
     name: '奇术',
+    image: '/assets/yanyun/gallery-flower-field.jpg',
     role: '江湖破局',
     tags: ['太极', '点穴', '狮吼功'],
     summary: '不局限于兵器，奇术让探索、战斗与互动拥有更多解法。',
-    detail: '奇术包含太极、点穴、狮吼功、蛤蟆功等武侠想象，可在后续页面细分为战斗、探索、趣味交互等类型。',
+    detail: '奇术包含太极、点穴、狮吼功、蛤蟆功等武侠想象，既能入战，也能成为探索与互动的别样解法。',
   },
 ]
 
 export const mapAreas = [
   {
     id: 'qinghe',
-    name: '清河',
+    name: '清河竹林',
     english: 'Qinghe',
+    image: '/assets/yanyun/area-qinghe.jpg',
     status: '已收录',
-    keywords: ['水岸', '村镇', '初入江湖'],
-    summary: '水色与烟火气交织的起点区域，适合承载新手游侠的探索线索。',
-    more: '后续可补充地宫入口、支线人物、采集点与奇遇条件。',
+    keywords: ['竹林', '水雾', '幽径'],
+    summary: '竹影与水雾铺开清河的静谧气质，适合承载初入江湖的探索线索。',
+    more: '林间视野层次清楚，适合整理采集、奇遇与隐秘路径。',
   },
   {
-    id: 'kaifeng',
-    name: '开封',
-    english: 'Kaifeng',
+    id: 'village',
+    name: '水车村落',
+    english: 'Village',
+    image: '/assets/yanyun/area-village.jpg',
     status: '重点整理',
-    keywords: ['市井', '楼阁', '人间百态'],
-    summary: '繁华城郭与江湖暗线并行，适合整理人物、商铺与城内事件。',
-    more: '可扩展为城区地图、NPC 索引和市井玩法专题。',
+    keywords: ['水车', '村舍', '田园'],
+    summary: '水车、村舍与山脚景观构成烟火气入口，适合承接人物与支线传闻。',
+    more: '村落空间有明显生活痕迹，适合整理 NPC、采集点和日常玩法。',
   },
   {
-    id: 'hexi',
-    name: '河西',
-    english: 'Hexi',
+    id: 'tower',
+    name: '塔影远山',
+    english: 'Tower',
+    image: '/assets/yanyun/area-tower.jpg',
     status: '线索归档',
-    keywords: ['风沙', '边地', '远行'],
-    summary: '以苍茫地貌和远行感形成对比，适合呈现大地图探索尺度。',
-    more: '未来可加入风物志、路线推荐与隐藏挑战记录。',
+    keywords: ['古塔', '夕照', '远山'],
+    summary: '古塔与远山形成开阔视线，适合呈现大地图的远景尺度。',
+    more: '夕照氛围明确，适合做路线推荐、观景点和拍照点资料。',
   },
   {
     id: 'unknown',
-    name: '待探索',
-    english: 'Unknown',
-    status: '未开放',
-    keywords: ['新版本', '传闻', '预留'],
-    summary: '为新版本、活动区域与玩家发现预留入口，保持资料平台可迭代。',
-    more: '当前仅展示占位状态，不跳转真实内容。',
+    name: '幽花荒径',
+    english: 'Wilderness',
+    image: '/assets/yanyun/area-flower-field.jpg',
+    status: '江湖传闻',
+    keywords: ['荒村', '花海', '隐秘'],
+    summary: '幽蓝花海与荒村气质并置，适合收纳传闻、怪谈和隐秘线索。',
+    more: '画面偏冷、气氛浓烈，可以作为探索专题中的悬疑入口。',
   },
 ]

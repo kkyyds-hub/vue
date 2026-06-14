@@ -26,8 +26,8 @@ defineProps({
         <a href="#top">首页</a>
         <a href="#features">江湖资料</a>
         <a href="#weapons">武学图鉴</a>
+        <a href="#gallery">实机画面</a>
         <a href="#areas">山河探索</a>
-        <a href="#weapons">收藏</a>
       </div>
     </nav>
 
@@ -47,17 +47,15 @@ defineProps({
 
         <div class="hero__actions">
           <a class="button button--primary" href="#features">进入江湖</a>
-          <a class="button button--ghost" href="#weapons">查看武学</a>
+          <a class="button button--ghost" href="#gallery">查看实机画面</a>
         </div>
       </div>
 
       <aside class="scroll-card" aria-label="江湖卷轴式信息卡">
         <div class="scroll-card__line"></div>
         <p class="eyebrow">Archive Scroll</p>
-        <h3>一页入江湖，万象见燕云</h3>
-        <p>
-          收录武学、奇术、区域与文化线索，不是简单展示页，而是面向探索与收藏的江湖资料平台。
-        </p>
+        <h3>全新江湖资料卷</h3>
+        <p>山河 / 武学 / 奇术 / 实机画面</p>
         <div class="scroll-card__grid">
           <div v-for="item in stats" :key="item.value" class="scroll-card__item">
             <strong>{{ item.value }}</strong>

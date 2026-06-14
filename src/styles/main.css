@@ -10,6 +10,7 @@
   --panel: rgba(26, 28, 27, 0.72);
   --panel-strong: rgba(38, 34, 27, 0.84);
   --gold: #d6ad62;
+  --gold-bright: #ffe0a0;
   --gold-soft: rgba(214, 173, 98, 0.34);
   --red: #8f2e22;
   --jade: #6fa995;
@@ -80,7 +81,7 @@ a {
 .eyebrow {
   margin: 0 0 0.8rem;
   color: var(--gold);
-  font-family: "Inter", "Avenir Next", sans-serif;
+  font-family: "Cinzel", "Cormorant Garamond", "Inter", "Avenir Next", sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -132,11 +133,25 @@ a {
   padding: 1.25rem clamp(1rem, 3vw, 3rem) 5rem;
   overflow: hidden;
   background:
+    linear-gradient(90deg, rgba(5, 6, 8, 0.9) 0%, rgba(8, 9, 10, 0.72) 36%, rgba(8, 9, 10, 0.42) 70%, rgba(5, 6, 8, 0.9) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(6, 7, 8, 0.22) 44%, rgba(7, 8, 9, 0.94) 100%),
     linear-gradient(rgba(214, 173, 98, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(214, 173, 98, 0.05) 1px, transparent 1px),
     radial-gradient(circle at 58% 38%, rgba(214, 173, 98, 0.2), transparent 18rem),
-    linear-gradient(130deg, rgba(17, 21, 24, 0.94), rgba(15, 13, 12, 0.72) 52%, rgba(7, 8, 10, 0.96));
-  background-size: 72px 72px, 72px 72px, auto, auto;
+    url("/assets/yanyun/hero-bg.jpg");
+  background-position: center, center, center, center, center, center;
+  background-size: auto, auto, 72px 72px, 72px 72px, auto, cover;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 22% 42%, rgba(255, 219, 147, 0.16), transparent 20rem),
+    radial-gradient(circle at 74% 48%, rgba(111, 169, 149, 0.13), transparent 24rem),
+    linear-gradient(110deg, rgba(0, 0, 0, 0.34), transparent 56%);
 }
 
 .hero::after {
@@ -213,7 +228,7 @@ a {
 
 .top-nav__brand small {
   color: var(--muted);
-  font-family: "Inter", "Avenir Next", sans-serif;
+  font-family: "Cinzel", "Cormorant Garamond", "Inter", "Avenir Next", sans-serif;
   font-size: 0.66rem;
   letter-spacing: 0;
 }
@@ -221,7 +236,7 @@ a {
 .top-nav__links {
   display: flex;
   align-items: center;
-  gap: clamp(0.55rem, 1.9vw, 1.55rem);
+  gap: clamp(0.5rem, 1.45vw, 1.25rem);
   color: #ded1ad;
   font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 0.92rem;
@@ -263,20 +278,42 @@ a {
 }
 
 .hero__copy h1 {
-  font-size: clamp(4rem, 10vw, 8.5rem);
-  letter-spacing: 0;
+  position: relative;
+  display: inline-block;
+  font-size: clamp(5rem, 11.8vw, 10.2rem);
+  letter-spacing: 0.03em;
   color: transparent;
-  background: linear-gradient(180deg, #fff4d7 0%, #d7aa54 48%, #7f4b24 100%);
+  background: linear-gradient(180deg, #fff8da 0%, #f1d58c 31%, #c48b37 62%, #5f3518 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: 0 26px 64px rgba(0, 0, 0, 0.35);
+  -webkit-text-stroke: 1px rgba(255, 226, 156, 0.18);
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.58));
+  text-shadow:
+    0 2px 0 rgba(58, 28, 11, 0.65),
+    0 22px 72px rgba(0, 0, 0, 0.62);
+}
+
+.hero__copy h1::before {
+  position: absolute;
+  z-index: -1;
+  left: -0.04em;
+  bottom: 0.06em;
+  width: 100%;
+  height: 0.32em;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(143, 46, 34, 0.05), rgba(143, 46, 34, 0.34), rgba(214, 173, 98, 0.1)),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.52), transparent 66%);
+  filter: blur(5px);
+  transform: skewX(-10deg);
 }
 
 .hero__copy h2 {
   margin-top: 0.45rem;
-  color: #ead7a5;
-  font-size: clamp(1.55rem, 3vw, 2.65rem);
+  color: #ffdf9b;
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
   font-weight: 700;
+  text-shadow: 0 12px 34px rgba(0, 0, 0, 0.62);
 }
 
 .hero__intro {
@@ -325,8 +362,10 @@ a {
 }
 
 .scroll-card {
+  max-width: 390px;
+  justify-self: end;
   position: relative;
-  padding: clamp(1.4rem, 3vw, 2rem);
+  padding: clamp(1.2rem, 2.5vw, 1.7rem);
   overflow: hidden;
   border: 1px solid rgba(214, 173, 98, 0.28);
   border-radius: 8px;
@@ -374,12 +413,12 @@ a {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
-  margin-top: 1.4rem;
+  gap: 0.65rem;
+  margin-top: 1rem;
 }
 
 .scroll-card__item {
-  padding: 0.95rem;
+  padding: 0.75rem;
   border: 1px solid rgba(214, 173, 98, 0.16);
   background: rgba(0, 0, 0, 0.16);
 }
@@ -391,7 +430,7 @@ a {
 
 .scroll-card__item strong {
   color: #f2d48d;
-  font-family: "Inter", "Avenir Next", sans-serif;
+  font-family: "Cinzel", "Cormorant Garamond", "Inter", "Avenir Next", sans-serif;
   font-size: 0.82rem;
 }
 
@@ -422,6 +461,8 @@ a {
 .section__heading h2 {
   color: #f5ddb0;
   font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: 0.04em;
+  text-shadow: 0 12px 34px rgba(0, 0, 0, 0.36);
 }
 
 .section__heading p:not(.eyebrow) {
@@ -433,7 +474,8 @@ a {
 
 .feature-grid,
 .weapon-grid,
-.area-grid {
+.area-grid,
+.gallery__grid {
   display: grid;
   gap: 1rem;
 }
@@ -445,6 +487,7 @@ a {
 .feature-card,
 .weapon-card,
 .area-card,
+.gallery-card,
 .showcase__shell {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -455,7 +498,8 @@ a {
 
 .feature-card,
 .weapon-card,
-.area-card {
+.area-card,
+.gallery-card {
   position: relative;
   overflow: hidden;
   transition:
@@ -467,7 +511,8 @@ a {
 
 .feature-card::before,
 .weapon-card::before,
-.area-card::before {
+.area-card::before,
+.gallery-card::before {
   position: absolute;
   inset: -1px;
   content: "";
@@ -479,7 +524,8 @@ a {
 
 .feature-card:hover,
 .weapon-card:hover,
-.area-card:hover {
+.area-card:hover,
+.gallery-card:hover {
   transform: translateY(-6px);
   border-color: rgba(214, 173, 98, 0.48);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35), 0 0 36px rgba(214, 173, 98, 0.08);
@@ -487,7 +533,8 @@ a {
 
 .feature-card:hover::before,
 .weapon-card:hover::before,
-.area-card:hover::before {
+.area-card:hover::before,
+.gallery-card:hover::before {
   opacity: 1;
 }
 
@@ -515,7 +562,7 @@ a {
 .feature-card__head small,
 .area-card__meta small {
   color: var(--jade);
-  font-family: "Inter", "Avenir Next", sans-serif;
+  font-family: "Cinzel", "Cormorant Garamond", "Inter", "Avenir Next", sans-serif;
   font-size: 0.72rem;
 }
 
@@ -650,14 +697,179 @@ a {
   margin: 1rem 0 0;
 }
 
+.gallery__seal {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.4rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(214, 173, 98, 0.28);
+  border-radius: 999px;
+  color: var(--gold-bright);
+  background: rgba(0, 0, 0, 0.18);
+  font-family: "Cinzel", "Cormorant Garamond", "Inter", "Avenir Next", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.gallery__grid {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+
+.gallery-card {
+  position: relative;
+  min-height: 18rem;
+  padding: 0;
+  overflow: hidden;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.gallery-card:first-child {
+  grid-row: span 2;
+}
+
+.gallery-card img,
+.weapon-card__media img,
+.area-card__media img,
+.detail-modal__media img,
+.gallery-viewer__panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-card img {
+  position: absolute;
+  inset: 0;
+  transition:
+    transform 520ms ease,
+    filter 520ms ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.055);
+  filter: saturate(1.12) contrast(1.05);
+}
+
+.gallery-card__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.78)),
+    radial-gradient(circle at 22% 20%, rgba(214, 173, 98, 0.18), transparent 22rem);
+}
+
+.gallery-card__copy {
+  position: absolute;
+  z-index: 1;
+  left: 1.1rem;
+  right: 1.1rem;
+  bottom: 1.1rem;
+}
+
+.gallery-card__copy strong,
+.gallery-card__copy small {
+  display: block;
+}
+
+.gallery-card__copy strong {
+  color: #ffe5ad;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  letter-spacing: 0.04em;
+}
+
+.gallery-card__copy small {
+  margin-top: 0.35rem;
+  color: #d6c7a8;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 0.95rem;
+}
+
+.gallery-viewer {
+  position: fixed;
+  z-index: 21;
+  display: grid;
+  inset: 0;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: rgba(0, 0, 0, 0.76);
+  backdrop-filter: blur(12px);
+}
+
+.gallery-viewer__panel {
+  position: relative;
+  width: min(1080px, 100%);
+  max-height: 86vh;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(214, 173, 98, 0.34);
+  border-radius: 8px;
+  background: #08090a;
+  box-shadow: var(--shadow);
+}
+
+.gallery-viewer__panel img {
+  max-height: 74vh;
+}
+
+.gallery-viewer__panel figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  color: #d7c8aa;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+.gallery-viewer__panel strong {
+  color: #ffe2a2;
+  font-size: 1.25rem;
+}
+
 .weapon-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .weapon-card {
   min-height: 18rem;
-  padding: 1.2rem;
+  padding: 0;
   cursor: pointer;
+}
+
+.weapon-card::after,
+.area-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 0%, rgba(7, 8, 9, 0.7) 42%, rgba(7, 8, 9, 0.96) 100%);
+}
+
+.weapon-card__media,
+.area-card__media {
+  position: absolute;
+  inset: 0;
+}
+
+.weapon-card__media img,
+.area-card__media img {
+  opacity: 0.72;
+  transition:
+    transform 420ms ease,
+    opacity 420ms ease,
+    filter 420ms ease;
+}
+
+.weapon-card:hover .weapon-card__media img,
+.area-card:hover .area-card__media img {
+  transform: scale(1.06);
+  opacity: 0.9;
+  filter: saturate(1.1);
 }
 
 .weapon-card:focus-visible {
@@ -673,7 +885,7 @@ a {
   border: 1px solid rgba(214, 173, 98, 0.38);
   border-radius: 50%;
   color: #f3d486;
-  background: rgba(0, 0, 0, 0.16);
+  background: rgba(0, 0, 0, 0.42);
   font-size: 1.35rem;
   font-weight: 800;
 }
@@ -708,13 +920,29 @@ a {
 }
 
 .weapon-card__role {
-  margin-top: 1.2rem;
+  position: relative;
+  z-index: 1;
+  margin: 5.9rem 1.2rem 0;
   color: var(--gold) !important;
   font-size: 0.92rem;
 }
 
+.weapon-card h3,
+.weapon-card p:not(.weapon-card__role),
 .weapon-card__tags {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+
+.weapon-card__top {
+  padding: 1.1rem 1.1rem 0;
+}
+
+.weapon-card__tags {
+  position: relative;
+  z-index: 1;
   margin-top: 1.1rem;
+  padding-bottom: 1.2rem;
 }
 
 .area-grid {
@@ -737,6 +965,8 @@ a {
 }
 
 .area-card__more {
+  position: relative;
+  z-index: 1;
   max-height: 0;
   margin: 0;
   overflow: hidden;
@@ -791,14 +1021,43 @@ a {
 
 .detail-modal {
   position: relative;
-  width: min(560px, 100%);
-  padding: clamp(1.4rem, 4vw, 2.2rem);
+  width: min(720px, 100%);
+  max-height: calc(100vh - 2rem);
+  padding: 0 0 clamp(1.4rem, 4vw, 2.2rem);
+  overflow: auto;
   border: 1px solid rgba(214, 173, 98, 0.36);
   border-radius: 8px;
   background:
     radial-gradient(circle at 86% 18%, rgba(214, 173, 98, 0.16), transparent 16rem),
     rgba(16, 17, 15, 0.96);
   box-shadow: var(--shadow);
+}
+
+.detail-modal > .eyebrow,
+.detail-modal h3,
+.detail-modal__role,
+.detail-modal__tags,
+.detail-modal__summary {
+  margin-left: clamp(1.4rem, 4vw, 2.2rem);
+  margin-right: clamp(1.4rem, 4vw, 2.2rem);
+}
+
+.detail-modal > .eyebrow {
+  margin-top: clamp(1.4rem, 4vw, 2rem);
+}
+
+.detail-modal__media {
+  position: relative;
+  height: min(320px, 42vh);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(214, 173, 98, 0.22);
+}
+
+.detail-modal__media::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(15, 16, 15, 0.72));
 }
 
 .detail-modal__close {
@@ -812,7 +1071,7 @@ a {
   border: 1px solid rgba(214, 173, 98, 0.24);
   border-radius: 50%;
   color: #f0d18c;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.48);
   cursor: pointer;
   font-size: 1.25rem;
 }
@@ -873,7 +1132,8 @@ a {
   .hero__content,
   .feature-grid,
   .weapon-grid,
-  .area-grid {
+  .area-grid,
+  .gallery__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -888,6 +1148,7 @@ a {
   }
 
   .scroll-card {
+    justify-self: stretch;
     grid-column: 1 / -1;
   }
 
@@ -899,6 +1160,7 @@ a {
   .top-nav__links {
     flex-wrap: wrap;
     justify-content: flex-end;
+    row-gap: 0.5rem;
   }
 }
 
@@ -923,6 +1185,7 @@ a {
   .feature-grid,
   .weapon-grid,
   .area-grid,
+  .gallery__grid,
   .scroll-card__grid {
     grid-template-columns: 1fr;
   }
@@ -932,7 +1195,32 @@ a {
   }
 
   .hero__copy h1 {
-    font-size: clamp(3.4rem, 19vw, 5rem);
+    font-size: clamp(3.2rem, 17vw, 4.8rem);
+  }
+
+  .hero__copy h1::before {
+    filter: blur(3px);
+  }
+
+  .hero__intro {
+    font-size: 0.98rem;
+  }
+
+  .scroll-card {
+    max-width: none;
+  }
+
+  .gallery-card:first-child {
+    grid-row: auto;
+  }
+
+  .gallery-card {
+    min-height: 15rem;
+  }
+
+  .gallery-viewer__panel figcaption {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .showcase__tabs {
@@ -950,5 +1238,10 @@ a {
   .weapon-card,
   .area-card {
     min-height: auto;
+  }
+
+  .weapon-card,
+  .area-card {
+    min-height: 18rem;
   }
 }

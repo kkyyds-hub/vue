@@ -13,6 +13,9 @@ defineEmits(['select'])
 
 <template>
   <article class="weapon-card" tabindex="0" @click="$emit('select', weapon)" @keydown.enter="$emit('select', weapon)">
+    <div v-if="weapon.image" class="weapon-card__media">
+      <img :src="weapon.image" :alt="`${weapon.name}武学画面`" loading="lazy" />
+    </div>
     <div class="weapon-card__top">
       <span class="weapon-card__mark">{{ weapon.name.slice(0, 1) }}</span>
       <FavoriteButton label="入匣" />

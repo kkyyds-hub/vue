@@ -9,6 +9,9 @@ defineProps({
 
 <template>
   <article class="area-card">
+    <div v-if="area.image" class="area-card__media">
+      <img :src="area.image" :alt="`${area.name}区域画面`" loading="lazy" />
+    </div>
     <div class="area-card__meta">
       <span>{{ area.status }}</span>
       <small>{{ area.english }}</small>
