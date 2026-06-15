@@ -24,7 +24,7 @@ defineEmits(['select'])
     </div>
     <div v-else class="weapon-placeholder" aria-hidden="true">
       <span class="weapon-placeholder__word">{{ weapon.name.slice(0, 1) }}</span>
-      <small>资料待补图</small>
+      <small>兵器卷宗</small>
     </div>
     <div class="weapon-card__top">
       <span class="weapon-card__mark">{{ weapon.name.slice(0, 1) }}</span>

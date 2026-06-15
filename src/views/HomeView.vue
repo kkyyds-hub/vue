@@ -27,11 +27,13 @@ function openWeaponDetail(weapon) {
   <main class="home-page">
     <HeroBanner :keywords="heroKeywords" />
 
+    <WorldScenesCarousel :items="worldScenes" />
+
     <section class="section features" id="features">
       <div class="section__heading">
         <p class="eyebrow">Core Archive</p>
         <h2>江湖资料，不止一面</h2>
-        <p>收录山河、武学、奇术与人间百业，以一页卷宗打开燕云江湖。</p>
+        <p>以山河风貌为起点，进入武学、奇术与文化万象交织的燕云江湖。</p>
       </div>
       <div class="feature-grid">
         <FeatureCard v-for="feature in featureCards" :key="feature.id" :feature="feature" />
@@ -39,8 +41,6 @@ function openWeaponDetail(weapon) {
     </section>
 
     <JianghuShowcase :tabs="showcaseTabs" :panels="showcasePanels" />
-
-    <WorldScenesCarousel :items="worldScenes" />
 
     <WeaponSlider :items="weaponPreviews" @select="openWeaponDetail" />
 

@@ -22,7 +22,7 @@ defineEmits(['close'])
           </div>
           <div v-else class="detail-modal__media detail-modal__media--empty">
             <span>{{ item.name.slice(0, 1) }}</span>
-            <small>资料待补图</small>
+            <small>兵器卷宗</small>
           </div>
           <p class="eyebrow">Wuxia Archive</p>
           <h3>{{ item.name }}</h3>

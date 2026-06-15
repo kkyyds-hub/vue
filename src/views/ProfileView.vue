@@ -2,10 +2,10 @@
 import AppFooter from '@/components/common/AppFooter.vue'
 
 const profileSections = [
-  { title: '角色信息', value: '游侠名待录入', summary: '角色资料待你补充，页面结构已预留。' },
-  { title: '常用兵器', value: '待选择', summary: '可承接兵器谱中的偏好记录。' },
-  { title: '截图收藏', value: '待整理', summary: '适合收纳江湖风貌与个人截图。' },
-  { title: '探索记录', value: '待整理', summary: '用于记录山河路线、谜境线索与文化发现。' },
+  { title: '角色信息', value: '燕云游侠', summary: '记录身份、称号与行走江湖的核心资料。' },
+  { title: '常用兵器', value: '剑 / 扇', summary: '承接兵器谱中的偏好记录与战斗风格。' },
+  { title: '截图收藏', value: '山河影册', summary: '收纳江湖风貌、城郭烟火与人间瞬间。' },
+  { title: '探索记录', value: '卷宗归档', summary: '记录山河路线、谜境线索与文化发现。' },
 ]
 </script>
 

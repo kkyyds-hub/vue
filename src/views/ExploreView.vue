@@ -18,7 +18,7 @@ const exploreSections = ['山河风貌', '城郭烟火', '奇术谜境', '文化
         <article v-for="section in exploreSections" :key="section" class="sub-card">
           <span>{{ section.slice(0, 1) }}</span>
           <h2>{{ section }}</h2>
-          <p>资料待补充，结构已预留。</p>
+          <p>沿着画面线索进入山河图志，串联区域、风物与探索主题。</p>
         </article>
       </div>
     </section>

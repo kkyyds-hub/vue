@@ -35,26 +35,33 @@ defineProps({
         </div>
       </div>
 
-      <aside class="profile-entry-card" aria-label="我的游侠档案入口">
-        <div class="profile-entry-card__seal">游侠</div>
-        <p class="eyebrow">Profile Gate</p>
-        <h3>我的游侠档案</h3>
-        <p class="profile-entry-card__intro">装备 / 兵器 / 截图 / 探索记录</p>
+      <aside class="profile-entry-card" aria-label="山河卷宗入口">
+        <div class="profile-entry-card__seal">山河</div>
+        <p class="eyebrow">Landscape Archive</p>
+        <h3>山河卷宗</h3>
+        <p class="profile-entry-card__intro">一页入江湖，万象见燕云</p>
         <div class="profile-entry-card__list">
           <div>
-            <span>游侠名</span>
-            <strong>待录入</strong>
+            <span>清河</span>
+            <strong>江湖起承</strong>
           </div>
           <div>
-            <span>常用兵器</span>
-            <strong>待选择</strong>
+            <span>开封</span>
+            <strong>城郭烟火</strong>
           </div>
           <div>
-            <span>探索记录</span>
-            <strong>待整理</strong>
+            <span>河西</span>
+            <strong>边塞风沙</strong>
+          </div>
+          <div>
+            <span>不见山</span>
+            <strong>迷踪待解</strong>
           </div>
         </div>
-        <RouterLink class="button button--primary profile-entry-card__button" to="/profile">进入档案</RouterLink>
+        <div class="profile-entry-card__actions">
+          <RouterLink class="button button--primary" to="/explore">阅览山河</RouterLink>
+          <a class="button button--ghost" href="#world-scenes">查看风貌</a>
+        </div>
       </aside>
     </div>
   </section>

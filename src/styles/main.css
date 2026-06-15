@@ -514,10 +514,18 @@ a {
   font-weight: 800;
 }
 
-.profile-entry-card__button {
+.profile-entry-card__actions {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.profile-entry-card__actions .button {
   width: 100%;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 }
 
 .section {
@@ -941,6 +949,14 @@ a {
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
+}
+
+.world-scenes__heading-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  flex-wrap: wrap;
 }
 
 .world-scenes__shell {

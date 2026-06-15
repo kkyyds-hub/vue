@@ -1,5 +1,6 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 
 const props = defineProps({
   items: {
@@ -57,9 +58,12 @@ onBeforeUnmount(stopAutoPlay)
       <div>
         <p class="eyebrow">World Scenes</p>
         <h2>江湖风貌</h2>
-        <p>山河、城郭、奇术与交锋，用一组画面收住燕云气质。</p>
+        <p>以山河、城郭、谜境与人间画面为索引，展开燕云世界的第一卷。</p>
       </div>
-      <span class="world-scenes__count">{{ activeIndex + 1 }} / {{ items.length }}</span>
+      <div class="world-scenes__heading-actions">
+        <RouterLink class="button button--primary" to="/explore">进入山河图志</RouterLink>
+        <span class="world-scenes__count">{{ activeIndex + 1 }} / {{ items.length }}</span>
+      </div>
     </div>
 
     <div v-if="activeItem" class="world-scenes__shell">
