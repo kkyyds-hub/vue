@@ -44,6 +44,7 @@ export const cultureEntries = [
     sourceUrl: 'https://www.yysls.cn/',
     sourceConfidence: '高',
     sourceNote: '来自中文官网和研究报告对“十六声 / 中华文明之声”的归纳。',
+    sourceLabel: '官方图源 · 文化总纲',
     riskNote: '官方图源 / 文化总纲',
   },
   {
@@ -60,6 +61,7 @@ export const cultureEntries = [
     sourceUrl: 'https://www.yysls.cn/news/official/20250905/37780_1257913.html',
     sourceConfidence: '中',
     sourceNote: '以不见山机关、水利与墨家线索承接百工百器方向。',
+    sourceLabel: '风貌归纳 · 机关',
     riskNote: '风貌归纳 / 图源较少，不写死机制',
   },
   {
@@ -76,6 +78,7 @@ export const cultureEntries = [
     sourceUrl: 'https://www.yysls.cn/2025/yydsj/kf/',
     sourceConfidence: '高',
     sourceNote: '开封主题页能稳定支撑樊楼、城郭、市井与宫城相关表达。',
+    sourceLabel: '官方图源 · 建筑',
     riskNote: '官方图源',
   },
   {
@@ -92,6 +95,7 @@ export const cultureEntries = [
     sourceUrl: 'https://www.yysls.cn/2025/yydsj/kf/',
     sourceConfidence: '高',
     sourceNote: '开封主题页与报告中的市井、樊楼、灯火线索相互吻合。',
+    sourceLabel: '官方图源 · 民俗',
     riskNote: '官方图源 / 风貌归纳',
   },
   {
@@ -108,6 +112,7 @@ export const cultureEntries = [
     sourceUrl: yanyunAssets.worldCulture.sourceUrl,
     sourceConfidence: '中',
     sourceNote: '沿用当前项目已有官方首页文化氛围图，适合承接舞乐与礼俗。',
+    sourceLabel: '官方图源 · 礼乐',
     riskNote: '官方图源 / 风貌归纳',
   },
   {
@@ -124,6 +129,7 @@ export const cultureEntries = [
     sourceUrl: 'https://www.yysls.cn/2025/yydsj/kf/',
     sourceConfidence: '高',
     sourceNote: '开封主题页的城郭楼阁和夜色素材适合表达百业烟火。',
+    sourceLabel: '官方图源 · 市井',
     riskNote: '官方图源',
   },
   {
@@ -140,6 +146,7 @@ export const cultureEntries = [
     sourceUrl: 'https://www.yysls.cn/news/official/20250905/37780_1257913.html',
     sourceConfidence: '高',
     sourceNote: '官方不见山概念曝光明确指向机关、水利、墨家与求真精神。',
+    sourceLabel: '官方概念图 · 机关',
     riskNote: '官方概念图 / 后续线索',
   },
   {
@@ -156,6 +163,7 @@ export const cultureEntries = [
     sourceUrl: yanyunAssets.weaponFan.sourceUrl,
     sourceConfidence: '中',
     sourceNote: '复用当前项目已有官方奇招氛围图，避免硬配未确认静态图。',
+    sourceLabel: '风貌归纳 · 奇术',
     riskNote: '风貌归纳 / 图源较少，不写死机制',
   },
   {
@@ -172,6 +180,7 @@ export const cultureEntries = [
     sourceUrl: 'https://www.yysls.cn/2024/yydsj/qh/',
     sourceConfidence: '中',
     sourceNote: '公开静态图较少，先以清河人间场景承接医术与民生纹理。',
+    sourceLabel: '风貌归纳 · 医术',
     riskNote: '风貌归纳 / 图源较少',
   },
   {
@@ -188,6 +197,7 @@ export const cultureEntries = [
     sourceUrl: 'https://www.yysls.cn/news/official/20250905/37780_1257913.html',
     sourceConfidence: '中',
     sourceNote: '结合不见山机关、水利与古代技术气质进行展示性归纳。',
+    sourceLabel: '风貌归纳 · 天象',
     riskNote: '风貌归纳 / 后续线索',
   },
 ]

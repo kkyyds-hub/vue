@@ -17,6 +17,9 @@ export const featureCards = [
     title: '山河图志',
     summary: '以清河、开封、河西与不见山为线索，建立燕云世界的风貌入口。',
     points: ['区域', '风貌'],
+    image: yanyunAssets.officialQingheOverview.file,
+    imageAlt: '清河原野与村落官方风貌图',
+    sourceLabel: '官方图源 · 山河',
     to: '/explore',
   },
   {
@@ -26,6 +29,9 @@ export const featureCards = [
     title: '江湖风貌',
     summary: '收录山河远景、城郭烟火、中式谜境与人间画面。',
     points: ['画面', '场景'],
+    image: yanyunAssets.officialKaifengFanlou.file,
+    imageAlt: '开封城郭灯火官方风貌图',
+    sourceLabel: '官方图源 · 风貌',
     href: '#world-scenes',
   },
   {
@@ -35,6 +41,9 @@ export const featureCards = [
     title: '武学奇术',
     summary: '以兵器、奇术与招式节奏为核心，承接后续武学图鉴。',
     points: ['兵器', '奇术'],
+    image: yanyunAssets.skillSword.file,
+    imageAlt: '剑官方武器展示图',
+    sourceLabel: '官方图源 · 武学',
     to: '/skills',
   },
   {
@@ -44,6 +53,9 @@ export const featureCards = [
     title: '文化万象',
     summary: '从建筑营造、民俗游艺、历法天象与岐黄医术中看见江湖人间。',
     points: ['文化', '人间'],
+    image: yanyunAssets.worldCulture.file,
+    imageAlt: '舞乐与楼阁文化氛围图',
+    sourceLabel: '官方图源 · 文化',
     to: '/culture',
   },
 ]
@@ -60,21 +72,33 @@ export const showcasePanels = {
     title: '以山河为卷',
     subtitle: '山海、城郭与远景承载不同探索密度，也让资料入口更像一卷可展开的江湖图。',
     points: ['山水远景、城郭生活与隐秘路径各有风物', '时间、天气与玩家行动牵动江湖变化', '地宫、奇遇与远景共同铺开开放世界'],
+    image: yanyunAssets.officialHomeHero.file,
+    imageAlt: '燕云十六声官方山河远眺主视觉',
+    sourceLabel: '官方图源 · 山河',
   },
   combat: {
     title: '以武学为笔',
     subtitle: '剑、枪、双刀、扇、伞等兵器共同构成动作与策略层次。',
     points: ['兵器定位鲜明，出手节奏各不相同', '门派招式、连段思路与克制关系彼此交织', '攻守转换与战斗反馈更接近真正的武侠较量'],
+    image: yanyunAssets.skillModao.file,
+    imageAlt: '陌刀官方武器展示图',
+    sourceLabel: '官方图源 · 武学',
   },
   mystic: {
     title: '奇术入局，动静皆法',
     subtitle: '太极、点穴、狮吼功、蛤蟆功等奇术让江湖探索不止于战斗。',
     points: ['控制、位移、破局与趣味交互各成门道', '武侠想象与开放世界互动彼此呼应', '一招一式都可能成为探索江湖的钥匙'],
+    image: yanyunAssets.skillTaiji.file,
+    imageAlt: '太极官方奇术动态图',
+    sourceLabel: '官方动态图 · 奇术',
   },
   culture: {
     title: '万象人间，有物有情',
     subtitle: '百工百器、建筑营造、历法天象与民俗游艺，让资料平台不只收录战斗。',
     points: ['传统工艺与场景用途藏在市井细节里', '医术、营造、游艺等百业共同构成江湖生活', '从战斗之外看见一个更完整的人间'],
+    image: yanyunAssets.worldCulture.file,
+    imageAlt: '舞乐与楼阁文化氛围图',
+    sourceLabel: '官方图源 · 文化',
   },
 }
 

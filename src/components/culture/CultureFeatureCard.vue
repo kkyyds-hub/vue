@@ -21,12 +21,15 @@ defineEmits(['select'])
     :aria-pressed="active"
     @click="$emit('select', entry.id)"
   >
-    <img :src="entry.image" :alt="entry.imageAlt" />
-    <span class="culture-feature-card__badge">{{ entry.riskNote }}</span>
+    <figure class="culture-feature-card__media">
+      <img :src="entry.image" :alt="entry.imageAlt" loading="lazy" />
+      <figcaption>{{ entry.sourceLabel || entry.riskNote }}</figcaption>
+    </figure>
     <div class="culture-feature-card__body">
       <small>{{ entry.enName }}</small>
       <h3>{{ entry.name }}</h3>
       <p>{{ entry.summary }}</p>
+      <span class="culture-feature-card__badge">{{ entry.riskNote }}</span>
       <div>
         <em v-for="tag in entry.tags" :key="tag">{{ tag }}</em>
       </div>

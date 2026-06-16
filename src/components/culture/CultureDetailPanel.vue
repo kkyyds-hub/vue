@@ -12,8 +12,8 @@ defineProps({
 <template>
   <aside v-if="entry" class="culture-detail-panel">
     <div class="culture-detail-panel__image">
-      <img :src="entry.image" :alt="entry.imageAlt" />
-      <span>{{ entry.riskNote }}</span>
+      <img :src="entry.image" :alt="entry.imageAlt" loading="lazy" />
+      <span>{{ entry.sourceLabel || entry.riskNote }}</span>
     </div>
 
     <div class="culture-detail-panel__content">

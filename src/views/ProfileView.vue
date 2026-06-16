@@ -67,9 +67,19 @@ onMounted(() => {
 
       <div v-if="favoriteSkills.length" class="sub-list">
         <article v-for="skill in favoriteSkills" :key="skill.id" class="sub-list__item">
-          <strong>{{ skill.name }}</strong>
-          <span>{{ skill.category }} / {{ skill.difficulty }}</span>
-          <p>{{ skill.summary }}</p>
+          <div v-if="skill.image" class="sub-list__media">
+            <img :src="skill.image" :alt="skill.imageAlt || `${skill.name}武学图`" loading="lazy" />
+            <small>{{ skill.sourceLabel || '官方图源' }}</small>
+          </div>
+          <div v-else class="sub-list__fallback" aria-hidden="true">
+            <span>{{ skill.name.slice(0, 1) }}</span>
+            <small>文字题签</small>
+          </div>
+          <div class="sub-list__content">
+            <strong>{{ skill.name }}</strong>
+            <span>{{ skill.category }} / {{ skill.difficulty }}</span>
+            <p>{{ skill.summary }}</p>
+          </div>
         </article>
       </div>
 
