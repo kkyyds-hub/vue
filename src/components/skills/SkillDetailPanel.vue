@@ -31,6 +31,19 @@ defineEmits(['toggle-favorite', 'select-related'])
           />
         </div>
 
+        <figure v-if="skill.detailImage || skill.image" class="skill-detail-panel__media">
+          <img
+            :src="skill.detailImage || skill.image"
+            :alt="skill.imageAlt || `${skill.name}官方武学图`"
+            loading="lazy"
+          />
+          <figcaption>{{ skill.sourceLabel || skill.riskNote || '官方图源' }}</figcaption>
+        </figure>
+        <div v-else class="skill-detail-panel__fallback">
+          <span>{{ skill.name.slice(0, 1) }}</span>
+          <small>文字题签 · 图源较少</small>
+        </div>
+
         <div class="skill-detail-panel__meta">
           <span>{{ skill.category }}</span>
           <span>{{ skill.difficulty }}</span>
@@ -55,9 +68,9 @@ defineEmits(['toggle-favorite', 'select-related'])
           <p>{{ skill.usage }}</p>
         </section>
 
-        <section v-if="skill.recommendedFileName || skill.riskNote">
+        <section v-if="skill.sourceKey || skill.riskNote">
           <h3>图源提示</h3>
-          <p v-if="skill.recommendedFileName">建议文件名：{{ skill.recommendedFileName }}</p>
+          <p v-if="skill.sourceKey">素材键：{{ skill.sourceKey }}</p>
           <p v-if="skill.riskNote">{{ skill.riskNote }}</p>
         </section>
 

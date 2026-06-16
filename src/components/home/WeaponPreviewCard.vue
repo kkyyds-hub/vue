@@ -20,11 +20,12 @@ defineEmits(['select'])
     @keydown.enter="$emit('select', weapon)"
   >
     <div v-if="weapon.image" class="weapon-card__media">
-      <img :src="weapon.image" :alt="`${weapon.name}武学画面`" loading="lazy" />
+      <img :src="weapon.image" :alt="weapon.imageAlt || `${weapon.name}官方武器展示图`" loading="lazy" />
+      <span v-if="weapon.sourceLabel" class="weapon-card__source">{{ weapon.sourceLabel }}</span>
     </div>
     <div v-else class="weapon-placeholder" aria-hidden="true">
       <span class="weapon-placeholder__word">{{ weapon.name.slice(0, 1) }}</span>
-      <small>兵器卷宗</small>
+      <small>文字题签</small>
     </div>
     <div class="weapon-card__top">
       <span class="weapon-card__mark">{{ weapon.name.slice(0, 1) }}</span>
