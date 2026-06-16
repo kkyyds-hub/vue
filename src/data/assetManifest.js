@@ -282,6 +282,32 @@ export const yanyunAssets = {
     riskNote: '官方动态图；只用于 skills 绳镖资料，不放入首页六兵器。',
   },
 
+  skillBow: {
+    file: '/assets/yanyun/skills/skill-bow-card.jpg',
+    title: '弓武器展示图',
+    sourceUrl: 'https://www.yysls.cn/news/official/20250723/37780_1249336.html',
+    sourcePageTitle: '此间盛夏，焕颜生色丨套装南风薰即将上架',
+    directImageUrl: 'https://nie.res.netease.com/r/pic/20250723/889318d0-e763-4d15-9858-55cfada37008.jpg',
+    captureMethod: '官方直链下载',
+    imageType: 'jpg',
+    usage: 'skills 弓条目',
+    confidence: '中',
+    riskNote: '官方弓武器外观图，适合 /skills 详情或二级兵器条目；不加入首页六兵器预览。',
+  },
+
+  skillLightnessAlt: {
+    file: '/assets/yanyun/skills/art-lightness-alt-card.gif',
+    title: '身法氛围演示图',
+    sourceUrl: 'https://www.yysls.cn/news/official/20230609/37780_1092748.html',
+    sourcePageTitle: '60%的燕云开放世界，可以玩什么？',
+    directImageUrl: 'https://nie.res.netease.com/r/pic/20230609/acbe2842-4d66-4097-920b-5eb6fe77ab0f.gif',
+    captureMethod: '官方直链下载',
+    imageType: 'gif',
+    usage: 'skills 轻功 / 身法氛围替代图',
+    confidence: '中',
+    riskNote: '官方开放世界演示资源，只能作为身法氛围图，不对应单一具体轻功招式。',
+  },
+
   flowPozhuChen: {
     file: '/assets/yanyun/skills/flow-pozhu-chen-card.png',
     title: '破竹·尘流派图',
