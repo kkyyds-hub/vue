@@ -44,7 +44,7 @@ export const featureCards = [
     title: '文化万象',
     summary: '从建筑营造、民俗游艺、历法天象与岐黄医术中看见江湖人间。',
     points: ['文化', '人间'],
-    href: '#showcase',
+    to: '/culture',
   },
 ]
 

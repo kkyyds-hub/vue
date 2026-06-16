@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import CultureView from '@/views/CultureView.vue'
 import ExploreView from '@/views/ExploreView.vue'
 import HomeView from '@/views/HomeView.vue'
 import ProfileView from '@/views/ProfileView.vue'
@@ -23,6 +24,11 @@ const routes = [
     path: '/explore',
     name: 'explore',
     component: ExploreView,
+  },
+  {
+    path: '/culture',
+    name: 'culture',
+    component: CultureView,
   },
   {
     path: '/profile',

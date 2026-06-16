@@ -13,11 +13,12 @@ import { RouterLink } from 'vue-router'
       <div class="app-header__links">
         <RouterLink to="/">首页</RouterLink>
         <a href="/#world-scenes">江湖风貌</a>
+        <RouterLink to="/culture">十六声文化</RouterLink>
         <a href="/#weapons">兵器谱</a>
         <RouterLink to="/skills">武学图鉴</RouterLink>
       </div>
 
-      <RouterLink class="app-header__profile" to="/profile">游侠档案</RouterLink>
+      <RouterLink class="app-header__profile" to="/profile">我的武林录</RouterLink>
     </nav>
   </header>
 </template>
