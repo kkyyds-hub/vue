@@ -35,6 +35,7 @@ defineEmits(['toggle-favorite', 'select-related'])
           <span>{{ skill.category }}</span>
           <span>{{ skill.difficulty }}</span>
           <span>{{ skill.role }}</span>
+          <span>资料可信度：{{ skill.sourceConfidence }}</span>
         </div>
 
         <div class="skill-detail-panel__tags">
@@ -52,6 +53,12 @@ defineEmits(['toggle-favorite', 'select-related'])
         <section>
           <h3>使用场景</h3>
           <p>{{ skill.usage }}</p>
+        </section>
+
+        <section v-if="skill.recommendedFileName || skill.riskNote">
+          <h3>图源提示</h3>
+          <p v-if="skill.recommendedFileName">建议文件名：{{ skill.recommendedFileName }}</p>
+          <p v-if="skill.riskNote">{{ skill.riskNote }}</p>
         </section>
 
         <section>

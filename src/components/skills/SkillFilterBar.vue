@@ -60,7 +60,7 @@ defineEmits(['update:keyword', 'update:category', 'update:difficulty', 'clear'])
     </div>
 
     <div class="skill-filter-group">
-      <span>难度</span>
+      <span>资料级别</span>
       <div>
         <button
           v-for="difficulty in difficulties"

@@ -129,7 +129,7 @@ function toggleFavorite(skillId) {
         <div>
           <p class="eyebrow">Skill Codex</p>
           <h2>图鉴检索</h2>
-          <p>按关键词、分类与难度筛选条目，快速定位兵器、奇术、心法与探索技。</p>
+          <p>按关键词、分类与资料级别筛选条目，快速定位兵器、奇术、流派与版本新增内容。</p>
         </div>
         <SkillStats :stats="stats" />
       </div>

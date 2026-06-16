@@ -7,7 +7,14 @@ import ExploreTimeline from '@/components/explore/ExploreTimeline.vue'
 import RegionDetailPanel from '@/components/explore/RegionDetailPanel.vue'
 import RegionNavigator from '@/components/explore/RegionNavigator.vue'
 import RegionVisualPanel from '@/components/explore/RegionVisualPanel.vue'
-import { cultureIndexes, exploreHero, exploreRegions, exploreStats, exploreTimeline } from '@/data/exploreData'
+import {
+  cultureIndexes,
+  exploreExtensions,
+  exploreHero,
+  exploreRegions,
+  exploreStats,
+  exploreTimeline,
+} from '@/data/exploreData'
 
 const activeRegionId = ref(exploreRegions[0]?.id ?? '')
 
@@ -43,6 +50,27 @@ function selectRegion(regionId) {
         <Transition name="panel-slide" mode="out-in">
           <RegionDetailPanel v-if="currentRegion" :key="`${currentRegion.id}-detail`" :region="currentRegion" />
         </Transition>
+      </div>
+    </section>
+
+    <section class="explore-section region-extension-section">
+      <div class="section__heading">
+        <p class="eyebrow">Extension File</p>
+        <h2>区域附属卷</h2>
+        <p>不纳入当前四境主线，只记录与主区域相连的扩展空间和风貌线索。</p>
+      </div>
+
+      <div class="region-extension-grid">
+        <article v-for="item in exploreExtensions" :key="item.id" class="region-extension-card">
+          <span>{{ item.status }}</span>
+          <h3>{{ item.name }}</h3>
+          <small>{{ item.enName }}</small>
+          <strong>{{ item.title }}</strong>
+          <p>{{ item.summary }}</p>
+          <div>
+            <em v-for="keyword in item.keywords" :key="keyword">{{ keyword }}</em>
+          </div>
+        </article>
       </div>
     </section>
 

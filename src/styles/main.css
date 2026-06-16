@@ -1939,6 +1939,103 @@ a {
   gap: 1rem;
 }
 
+.region-extension-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.region-extension-card {
+  position: relative;
+  min-height: 18rem;
+  overflow: hidden;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid rgba(214, 173, 98, 0.24);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(143, 46, 34, 0.16), transparent 18rem),
+    linear-gradient(135deg, rgba(255, 244, 211, 0.06), transparent 40%),
+    var(--panel);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(16px);
+}
+
+.region-extension-card::after {
+  position: absolute;
+  right: -4rem;
+  bottom: -5rem;
+  width: 16rem;
+  height: 16rem;
+  content: "";
+  border: 1px solid rgba(214, 173, 98, 0.14);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(214, 173, 98, 0.1), transparent 64%);
+}
+
+.region-extension-card span,
+.region-extension-card h3,
+.region-extension-card small,
+.region-extension-card strong,
+.region-extension-card p,
+.region-extension-card div {
+  position: relative;
+  z-index: 1;
+}
+
+.region-extension-card span {
+  color: var(--gold);
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-weight: 700;
+}
+
+.region-extension-card h3 {
+  margin: 0.5rem 0 0;
+  color: #f5ddb0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.08;
+}
+
+.region-extension-card small {
+  display: block;
+  margin-top: 0.35rem;
+  color: #b9ad91;
+  font-family: "Cinzel", "Cormorant Garamond", "Inter", "Avenir Next", sans-serif;
+}
+
+.region-extension-card strong {
+  display: block;
+  margin-top: 1rem;
+  color: #f0d18c;
+}
+
+.region-extension-card p {
+  max-width: 48rem;
+  color: #cfc1a3;
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  line-height: 1.85;
+}
+
+.region-extension-card div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.region-extension-card em {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.85rem;
+  padding: 0 0.72rem;
+  border: 1px solid rgba(214, 173, 98, 0.22);
+  border-radius: 999px;
+  color: #e8d5aa;
+  background: rgba(255, 255, 255, 0.045);
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 0.84rem;
+  font-style: normal;
+}
+
 .explore-timeline::before {
   position: absolute;
   left: 2rem;
