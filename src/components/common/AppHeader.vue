@@ -11,14 +11,13 @@ import { RouterLink } from 'vue-router'
       </RouterLink>
 
       <div class="app-header__links">
-        <RouterLink to="/">首页</RouterLink>
-        <a href="/#world-scenes">江湖风貌</a>
-        <RouterLink to="/culture">十六声文化</RouterLink>
-        <a href="/#weapons">兵器谱</a>
-        <RouterLink to="/skills">武学图鉴</RouterLink>
+        <RouterLink to="/" exact-active-class="is-active">首页</RouterLink>
+        <RouterLink to="/explore" active-class="is-active">山河图志</RouterLink>
+        <RouterLink to="/skills" active-class="is-active">武学图鉴</RouterLink>
+        <RouterLink to="/culture" active-class="is-active">十六声文化</RouterLink>
       </div>
 
-      <RouterLink class="app-header__profile" to="/profile">我的武林录</RouterLink>
+      <RouterLink class="app-header__profile" to="/profile" active-class="is-active">我的武林录</RouterLink>
     </nav>
   </header>
 </template>

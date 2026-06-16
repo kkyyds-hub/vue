@@ -135,7 +135,8 @@ a {
   color: #d8c8a8;
 }
 
-.app-header__links a:hover {
+.app-header__links a:hover,
+.app-header__links a.is-active {
   color: #ffe4a7;
   background: rgba(214, 173, 98, 0.1);
   box-shadow: inset 0 0 0 1px rgba(214, 173, 98, 0.16);
@@ -149,7 +150,8 @@ a {
   font-weight: 800;
 }
 
-.app-header__profile:hover {
+.app-header__profile:hover,
+.app-header__profile.is-active {
   transform: translateY(-1px);
   box-shadow: 0 16px 38px rgba(214, 173, 98, 0.32);
 }
