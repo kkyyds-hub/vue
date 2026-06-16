@@ -85,7 +85,7 @@ onBeforeUnmount(stopAutoPlay)
       </div>
 
       <aside class="world-scenes__copy">
-        <p class="eyebrow">{{ activeItem.sourceKey }}</p>
+        <p class="eyebrow">{{ activeItem.sourceLabel || activeItem.sourceKey }}</p>
         <h3>{{ activeItem.title }}</h3>
         <p>{{ activeItem.subtitle }}</p>
         <div class="world-scenes__tags">

@@ -62,6 +62,7 @@ function selectRegion(regionId) {
 
       <div class="region-extension-grid">
         <article v-for="item in exploreExtensions" :key="item.id" class="region-extension-card">
+          <img v-if="item.image" :src="item.image" :alt="item.imageAlt" />
           <span>{{ item.status }}</span>
           <h3>{{ item.name }}</h3>
           <small>{{ item.enName }}</small>

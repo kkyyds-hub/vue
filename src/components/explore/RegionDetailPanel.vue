@@ -19,6 +19,8 @@ defineProps({
 
     <p class="region-detail-panel__summary">{{ region.summary }}</p>
 
+    <p v-if="region.visualNote" class="region-detail-panel__source">{{ region.visualNote }}</p>
+
     <div class="region-detail-panel__clues">
       <h3>探索线索</h3>
       <ul>
